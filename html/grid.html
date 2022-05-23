@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    #grid{
+      border:5px solid pink;
+      display:grid;
+      grid-template-columns: 150px 1fr; /*px는 고정적인 크기, fr은 비율자동조정*/
+    }
+    div{
+      border:5px solid gray;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="grid">
+      <!-->caniuse.com 에서 어떤 브라우저의 어떤 버전이 그리드를 사용할 수 있는지 알 수 있음<-->
+      <div>NAVIGATION</div>
+      <div>Ut ac turpis vitae lorem hendrerit maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet urna eu quam iaculis efficitur. Donec eleifend felis magna, quis interdum libero tempor in. Vivamus at blandit leo. Pellentesque posuere augue ultrices odio posuere blandit. Maecenas ac odio dui. Nam imperdiet nibh a lacus scelerisque fermentum. Integer at nibh dui.</div>
+      <!-- div는 block, span은 inline. 둘다 의미 없는 태그 -->
+    </div>
+  </body>
+</html>

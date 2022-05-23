@@ -2,15 +2,51 @@
 <html>
 <head>
 <title="test"><meta charset="utf-8">
+<style>
+  body{
+    margin:80px;
+  }
+  .h1title{
+     color:green;
+     text-decoration:none;
+   }
+  .li2{
+      color:red;
+  }
+  h1{
+    border-bottom:2px solid green; padding:40px; margin:0;
+  }
+  #grid ol{
+    border-right:2px solid green;
+    width:150px; margin:0; padding:15px; padding-left: 25px;
+  }
+  #grid{
+    display:grid;
+    grid-template-columns: 230px 1fr;
+  }
+  @media(max-width:800px){
+    #grid{
+      display:block;
+  }
+  #grid ol{
+    border-right:none;
+  }
+  h1{
+    border-bottom:none;
+  }
+}
+</style>
 </head>
 <body>
-  <h1><a href="test.html">2.voglio vado in italiano</a></h1>
-  <ul>unordered list
-    <li>1.prendiamo un caffee insieme?</li>
-    <li>2.voglio vado in italiano</li>
-    <li>3.come stai?</li>
-  </ul>
-  <p> Da dove viene?
-Al contrario di quanto si pensi, Lorem Ipsum non è semplicemente una sequenza casuale di caratteri. Risale ad un classico della letteratura latina del 45 AC, cosa che lo rende vecchio di 2000 anni. Richard McClintock, professore di latino al Hampden-Sydney College in Virginia, ha ricercato una delle più oscure parole latine, consectetur, da un passaggio del Lorem Ipsum e ha scoperto tra i vari testi in cui è citata, la fonte da cui è tratto il testo, le sezioni 1.10.32 and 1.10.33 del "de Finibus Bonorum et Malorum" di Cicerone. Questo testo è un trattato su teorie di etica, molto popolare nel Rinascimento. La prima riga del Lorem Ipsum, "Lorem ipsum dolor sit amet..", è tratta da un passaggio della sezione 1.10.32.
+  <h1><a href="test.html" class="h1title"><div style="text-align:center">Un caffe</div></a></h1>
+  <div id="grid">
+    <ol>
+      <li>Caffe normale</li>
+      <li><div class="li2">Latte</div></li>
+      <li>Macchiato</li>
+    </ol>
+    <p> Da dove viene?
+  Al contrario di quanto si pensi, Lorem Ipsum non è semplicemente una sequenza casuale di caratteri. Risale ad un classico della letteratura latina del 45 AC, cosa che lo rende vecchio di 2000 anni. Richard McClintock, professore di latino al Hampden-Sydney College in Virginia, ha ricercato una delle più oscure parole latine, consectetur, da un passaggio del Lorem Ipsum e ha scoperto tra i vari testi in cui è citata, la fonte da cui è tratto il testo, le sezioni 1.10.32 and 1.10.33 del "de Finibus Bonorum et Malorum" di Cicerone. Questo testo è un trattato su teorie di etica, molto popolare nel Rinascimento. La prima riga del Lorem Ipsum, "Lorem ipsum dolor sit amet..", è tratta da un passaggio della sezione 1.10.32.</p>
+  </div>
 </body>
 </html>
