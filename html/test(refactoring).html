@@ -33,15 +33,16 @@ a{
   document.querySelector('body').style.backgroundColor='white';
   document.querySelector('body').style.color='black';
   ">
-  <input id="night_day" type="button" value="night" onclick="
-    if(document.querySelector('#night_day').value==='night'){
-      document.querySelector('body').style.backgroundColor='black';
-      document.querySelector('body').style.color='white';
-      document.querySelector('#night_day').value='day';
+  <input type="button" value="night" onclick="
+    var target=document.querySelector('body').style;
+    if(this.value==='night'){
+      target.backgroundColor='black';
+      target.color='white';
+      this.value='day';
     }else{
-      document.querySelector('body').style.backgroundColor='white';
-      document.querySelector('body').style.color='black';
-      document.querySelector('#night_day').value='night';
+      target.backgroundColor='white';
+      target.color='black';
+      this.value='night';
     }
     ">
     <!-- ===은 좌항우항 비교로 true/false가 나오는 연산자.

@@ -2,50 +2,18 @@
 <html>
 <head>
 <title="test"><meta charset="utf-8">
-  </head>
-    <style>
-      body{
-        margin:80px;
-      }
-      .h1title{
-         color:green; text-decoration:none;
-      }
-      .li1{
-          color:red;
-      }
-      h1{
-        border-bottom:2px solid green; padding:40px; margin:0;
-      }
-      #grid ol{
-        border-right:2px solid green;
-        width:150px; margin:0; padding:15px; padding-left: 25px;
-      }
-      #grid{
-        display:grid;
-        grid-template-columns: 230px 1fr;
-      }
-      @media(max-width:800px){
-        #grid{
-          display:block;
-      }
-      #grid ol{
-        border-right:none;
-      }
-      h1{
-        border-bottom:none;
-      }
-    }
-    </style>
-  <body>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
   <h1><a href="test.html" class="h1title"><div style="text-align:center">Un caffe</div></a></h1>
   <div id="grid">
     <ol>
-      <li><div class="li1">Caffe normale</li>
-      <li>Latte</li>
-      <li>Macchiato</li>
+      <li><a href="test1.html"><div class="li1">Caffe normale</div></a></li>
+      <li><a href="test2.html">Latte</a></li>
+      <li><a href="test3.html">Macchiato</a></li>
     </ol>
     <div>
-      <h2>Latte</h2>
+      <h2>Caffe normale</h2>
       <p>Esistono innumerevoli variazioni dei passaggi del Lorem Ipsum, ma la maggior parte hanno subito delle variazioni del tempo, a causa dell’inserimento di passaggi ironici, o di sequenze casuali di caratteri palesemente poco verosimili. Se si decide di utilizzare un passaggio del Lorem Ipsum, è bene essere certi che non contenga nulla di imbarazzante. In genere, i generatori di testo segnaposto disponibili su internet tendono a ripetere paragrafi predefiniti, rendendo questo il primo vero generatore automatico su intenet. Infatti utilizza un dizionario di oltre 200 vocaboli latini, combinati con un insieme di modelli di strutture di periodi, per generare passaggi di testo verosimili. Il testo così generato è sempre privo di ripetizioni, parole imbarazzanti o fuori luogo ecc.
       </p>
     </div>
