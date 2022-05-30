@@ -2,34 +2,6 @@
 <html>
 <head>
 <title="test"><meta charset="utf-8">
-<script>
-    function nightDayHandler(self){
-      var target=document.querySelector('body').style;
-      if(self.value==='night'){
-        target.backgroundColor='black';
-        target.color='white';
-        self.value='day';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i<alist.length){
-          alist[i].style.color='red';
-          i=i+1;
-        }
-      }else{
-        target.backgroundColor='white';
-        target.color='black';
-        self.value='night';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i<alist.length){
-          alist[i].style.color=null;
-          i=i+1;
-        }
-      }
-    }
-  </script>
 </head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,19 +23,43 @@ a{
                  id>class>태그 선택자 순으로 적용 */
 }
 </style>
-<body>
 <div id="main">MAIN PAGE</div>
+<body>
   <input type="button" value="night" onclick="
     document.querySelector('body').style.backgroundColor='black';
     document.querySelector('body').style.color='white';
   ">
   <input type="button" value="day" onclick="
-    document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').style.color='black';
+  document.querySelector('body').style.backgroundColor='white';
+  document.querySelector('body').style.color='black';
   ">
   <input type="button" value="night" onclick="
-    nightDayHandler(this);
-  ">
+    var target=document.querySelector('body').style;
+    if(this.value==='night'){
+      target.backgroundColor='black';
+      target.color='white';
+      this.value='day';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i<alist.length){
+      alist[i].style.color='powderblue';
+      i=i+1;
+      }
+
+    }else{
+      target.backgroundColor='white';
+      target.color='black';
+      this.value='night';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i<alist.length){
+      alist[i].style.color=null;
+      i=i+1;
+      }
+    }
+    ">
     <!-- ===은 좌항우항 비교로 true/false가 나오는 연산자.
          = 은 우항의 값을 좌항에 대입하는 대입연산자 -->
   <ul>unordered list

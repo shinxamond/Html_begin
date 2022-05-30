@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Function</h1>
+    <h2>Basic</h2>
+    <ul>
+      <script>
+      function two(){
+        document.write('<li>2-1</li>');
+        document.write('<li>2-2</li>');
+      }
+        document.write('<li>1</li>');
+        two();
+        document.write('<li>3</li>');
+        two();
+      </script>
+    </ul>
+
+    <h2>Parameter(매개변수) & Argument(인자)</h2>
+    <script>
+      function onePlusOne(){
+        document.write(1+1+'<br>');
+      }
+      onePlusOne();
+      function sum(left, right){
+        // 인자값을 받아서 함수 안으로 매개해주는 변수 left, right를 parameter(매개변수)라고 부른다.
+        document.write(left+right+'<br>');
+      }
+      sum(2,5); // 함수로 전달하는 2, 3을 argument(인자)라고 한다.
+      sum(5,7);
+    </script>
+
+    <h2>Return</h2>
+  </body>
+</html>
