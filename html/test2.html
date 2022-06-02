@@ -3,9 +3,48 @@
 <head>
 <title="test"><meta charset="utf-8">
 <link rel="stylesheet" href="style.css">
+<script>
+  function LinksSetColor(color){
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i<alist.length){
+      alist[i].style.color=color;
+      i=i+1;
+    }
+  }
+
+  var Body = {
+    setColor : function(color){
+      document.querySelector('body').style.color = color;
+    },
+    setBackgroundColor : function(color){
+      document.querySelector('body').style.backgroundColor=color;
+
+    }
+  }
+
+  function nightDayHandler(self){
+    var target=document.querySelector('body');
+    if(self.value === 'night'){
+      Body.setBackgroundColor('black');
+      Body.setColor('white');
+      self.value='day';
+      LinksSetColor('white');
+ 
+    }else{
+      Body.setBackgroundColor('powderblue');
+      Body.setColor('black');
+      self.value='night';
+      LinksSetColor(null);
+    }
+  }
+</script>
 </head>
 <body style="background-color:powderblue">
   <h1><a href="test.html" class="h1title"><div style="text-align:center">Un caffe</div></a></h1>
+  <input type="button" value="night" onclick="
+  nightDayHandler(this);
+">
   <div id="grid">
     <ol>
       <li><a href="test1.html">Caffe normale</a></li>

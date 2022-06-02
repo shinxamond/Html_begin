@@ -19,5 +19,20 @@
     coworkers["data scientist"] = "hong"; //data scientist 사이의 띄어쓰기가 있으니까 [""] 이렇게 써야한다. 이 경우 .은 생략
     document.write("data scientist : "+coworkers["data scientist"]+"<br>");
     </script>
+    <h2>Iterate(객체와 반복문)</h2> <!--모든 데이터 가져와서 확인-->
+    <script>
+      for(var key in coworkers) {
+        document.write(key+' : '+coworkers[key]+'<br>');
+      }
+    </script>
+    <h2>Property&Method</h2>
+    <script>
+      coworkers.showAll = function(){
+        for(var key in this) {  //this는 위에서 coworkers의 이름이 바뀔 때 마다 바꿔야 되는 것을 방지하여 자기 자신을 받는 것
+          document.write(key+' : '+this[key]+'<br>');
+        }
+      }
+      coworkers.showAll();
+    </script>
   </body>
 </html>
